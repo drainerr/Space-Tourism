@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Space-Tourism/static/css/main.837b650e.chunk.css",
-    "main.js": "/Space-Tourism/static/js/main.41280a43.chunk.js",
-    "main.js.map": "/Space-Tourism/static/js/main.41280a43.chunk.js.map",
+    "main.js": "/Space-Tourism/static/js/main.646c9bcf.chunk.js",
+    "main.js.map": "/Space-Tourism/static/js/main.646c9bcf.chunk.js.map",
     "runtime-main.js": "/Space-Tourism/static/js/runtime-main.fc2bce17.js",
     "runtime-main.js.map": "/Space-Tourism/static/js/runtime-main.fc2bce17.js.map",
     "static/js/2.a2bf8145.chunk.js": "/Space-Tourism/static/js/2.a2bf8145.chunk.js",
@@ -17,14 +17,19 @@
     "static/media/icon-close.d47fda63.svg": "/Space-Tourism/static/media/icon-close.d47fda63.svg",
     "static/media/icon-hamburger.5273efa7.svg": "/Space-Tourism/static/media/icon-hamburger.5273efa7.svg",
     "static/media/image-douglas-hurley.e4c7def4.webp": "/Space-Tourism/static/media/image-douglas-hurley.e4c7def4.webp",
+    "static/media/image-launch-vehicle-landscape.4281a59f.jpg": "/Space-Tourism/static/media/image-launch-vehicle-landscape.4281a59f.jpg",
     "static/media/image-launch-vehicle-portrait.0c758955.jpg": "/Space-Tourism/static/media/image-launch-vehicle-portrait.0c758955.jpg",
     "static/media/image-moon.b5a3c90e.webp": "/Space-Tourism/static/media/image-moon.b5a3c90e.webp",
+    "static/media/image-space-capsule-landscape.d672da81.jpg": "/Space-Tourism/static/media/image-space-capsule-landscape.d672da81.jpg",
+    "static/media/image-space-capsule-portrait.dd0ac138.jpg": "/Space-Tourism/static/media/image-space-capsule-portrait.dd0ac138.jpg",
+    "static/media/image-spaceport-landscape.0f3ca5c0.jpg": "/Space-Tourism/static/media/image-spaceport-landscape.0f3ca5c0.jpg",
+    "static/media/image-spaceport-portrait.85523db5.jpg": "/Space-Tourism/static/media/image-spaceport-portrait.85523db5.jpg",
     "static/media/logo.565f7f2c.svg": "/Space-Tourism/static/media/logo.565f7f2c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.fc2bce17.js",
     "static/js/2.a2bf8145.chunk.js",
     "static/css/main.837b650e.chunk.css",
-    "static/js/main.41280a43.chunk.js"
+    "static/js/main.646c9bcf.chunk.js"
   ]
 }
