@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route,Switch} from 'react-router-dom';
 
 function App() {
   return (
-    <Router basename="/space-tourism">
+    <Router basename="/Space-Tourism">
       <div className="App">
         <Switch>
           <Route exact path="/">

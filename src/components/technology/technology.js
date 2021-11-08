@@ -2,10 +2,17 @@ import Header from "../header";
 import './technology.css'
 import defaultImage from '../../assets/technology/image-launch-vehicle-portrait.jpg'
 import Data from '../../assets/data.json'
+import fImagePortrait from '../../assets/technology/image-launch-vehicle-portrait.jpg'
+import fImageLandscape from '../../assets/technology/image-launch-vehicle-landscape.jpg'
+import sImagePortrait from '../../assets/technology/image-space-capsule-portrait.jpg'
+import sImageLanscape from '../../assets/technology/image-space-capsule-landscape.jpg'
+import tImagePortrait from '../../assets/technology/image-spaceport-portrait.jpg'
+import tImageLandscape from '../../assets/technology/image-spaceport-landscape.jpg'
+
 const Technology = () => {
     const onActive = (id) => {   
         const buttons = document.querySelectorAll('.button-num')
-        const {name,description,images} = Data.technology[id]
+        const {name,description} = Data.technology[id]
 
         buttons.forEach(e => {
             e.style.backgroundColor = 'transparent'
@@ -16,10 +23,29 @@ const Technology = () => {
 
         document.querySelector('.tech-h1').innerText = name.toUpperCase()
         document.querySelector('.tech-p').innerText = description
-        
         const img = document.querySelector('.tech-img')
         const width = window.innerWidth
-        width > 768 ? img.src = images.portrait : img.src = images.landscape;   
+        if(width > 768){
+            if(id === 0){
+                img.src = fImagePortrait;
+            } 
+            if(id === 1){
+                img.src = sImagePortrait;
+            } 
+            if(id === 2){
+                img.src = tImagePortrait;
+            }
+        } else {
+            if(id === 0){
+                img.src = fImageLandscape;
+            } 
+            if(id === 1){
+                img.src = sImageLanscape;
+            }
+            if(id === 2){
+                img.src = tImageLandscape;
+            }
+        }
     }
 
     return ( 
