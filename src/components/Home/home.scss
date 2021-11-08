@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@font-face {
+    font-family: 'Bellefair';
+    src: url(../../assets/fonts/Bellefair-Regular.ttf);
+}
+
+$font-Barlow: 'Barlow Condensed', sans-serif;
+$home-p-color: #D0D6F9;
+$space-explore-font: 'Bellefair';
+
+@mixin defLink($color) {
+    color: $color;
+    text-decoration: none;
+}
+@mixin bgProps(){
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-attachment: fixed;
+}
+body{
+    background-image: url(../../assets/home/background-home-desktop.jpg);
+    @include bgProps();
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100vw; 
+    .home-container{   
+        overflow:hidden;
+        main{
+            display:flex;
+            justify-content: space-around;
+            color:white;
+            margin-top:28vh;
+            .text-container{
+                width:450px;
+                h3{
+                    letter-spacing: 4.72px;
+                    color:$home-p-color;
+                    font-family: $font-Barlow;
+                    font-size:28px;
+                }
+                h1{
+                    font-family: 'Bellefair';
+                    font-size:150px;
+                    font-weight: 500;
+                }
+                p{
+                    font-family: $font-Barlow;
+                    color:$home-p-color;
+                    line-height:32px;
+                    font-size:18px;
+                }
+            }
+            .explore{
+                width:230px;
+                height:230px;
+                background-color:white;
+                display:flex;
+                align-self: flex-end;
+                align-items: center;
+                justify-content: center;
+                border-radius:50%;
+                a{
+                    @include defLink(#0B0D17);
+                    font-family: 'Bellefair';
+                    font-size:32px;
+                    letter-spacing: 2px;
+                    &:hover{
+                        cursor:pointer;
+                    }
+                }
+                &::before{
+                    content:"";
+                    z-index:-1;
+                    position: absolute;
+                    background-color:transparent;
+                    border-radius:50%;
+                    height:330px;
+                    width:330px;
+                }
+                &:hover::before{
+                    background-color:rgba(256,256,256,.2);
+                    transition: .5s 0s linear;
+                }
+            }
+        }   
+    }   
+}
+@media only screen and (max-width:1024px){
+    main{
+        align-items: center;
+        .explore{
+            margin-top:100px;
+            margin-top:11vh;
+            align-self: center !important;
+        }
+    }
+}
+// Tablet
+@media only screen and (max-width:768px){
+    body{
+        background-image: url(../../assets/home/background-home-tablet.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: unset;
+        overflow-x: hidden;
+        transition: background-image 0.5s ease-in-out;
+        main{
+            flex-direction: column !important;
+            align-items: center !important;
+            margin-top:14vh !important;
+            .text-container{
+                h3{
+                    font-size:20px !important;
+                    letter-spacing: 3.38px !important;
+                    text-align: center;
+                }
+                p{
+                    line-height: 28px !important;
+                    font-size:16px !important;
+                    text-align: center;
+                }
+            }
+            .explore{
+                margin-top:20vh !important;
+                align-self: center !important;
+                margin-bottom:90px !important;
+                &::before{
+                    display:none;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:321px){
+    body{
+        background-repeat: repeat !important;
+    }
+}
+// Mobile
+@media only screen and (max-width:480px){
+    html{
+        height:100% !important;
+    }
+    body{
+        background-image: url('../../assets/home/background-home-mobile.jpg') !important;
+        transition: background-image 0.5s ease-in-out;
+        main{
+            margin-top: 3vh !important;
+            .text-container{
+                width: 87vw !important;
+                h3{
+                    font-size:16px !important;
+                }
+                h1{
+                    line-height: 100px;
+                    font-size:80px !important;
+                    text-align: center;
+                    margin:16px 0;
+                
+                }
+                p{
+                    font-size:15px !important;
+                    line-height: 25px;
+                    
+                }
+            }
+            .explore{
+                height:40vw !important;
+                width:40vw !important;
+                margin-top:12vh;
+                margin-bottom:auto !important;
+                a{
+                    font-size:20px !important;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width:1024px){
+    .home-container{   
+        main{
+            .text-container{
+                width:31vw !important;
+                h3{
+                    font-size:2vw !important;
+                    letter-spacing: .28vw !important;
+                }
+                h1{
+                    font-size:10vw !important;
+                }
+                p{
+                    line-height:2.2vw !important;
+                    font-size:1.2vw !important;
+                }
+            }
+            .explore{
+                width:16vw !important;
+                height:16vw !important;
+                a{
+                    font-size:2.1vw !important;
+                    letter-spacing: 0.15vw !important;
+                }
+                &::before{
+                    height:23vw !important;
+                    width:23vw !important;
+                }
+            }
+        }   
+    }   
+}

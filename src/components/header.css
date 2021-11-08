@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+@font-face {
+  font-family: 'Bellefair';
+  src: url(../assets/fonts/Bellefair-Regular.ttf);
+}
+
+header {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  margin-left: 4vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 11vh;
+  margin-top: 4vh;
+  -webkit-backdrop-filter: blur(2vw);
+          backdrop-filter: blur(2vw);
+}
+
+header .logo img {
+  height: 3vw;
+  width: 3vw;
+}
+
+header .line {
+  width: 33vw;
+  background-color: rgba(255, 255, 255, 0.25);
+  height: 1px;
+  margin-left: 4vw;
+  margin-right: 6vw;
+}
+
+header .burger-menu {
+  display: none;
+}
+
+header .nav-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 38vw;
+}
+
+header .nav-ul li a {
+  font-size: 1.2vw;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .15vw;
+  padding: 3.5vh 0;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  border-bottom: solid 3px transparent;
+}
+
+header .nav-ul li a span {
+  margin-right: .5vw;
+}
+
+header .nav-ul li a.active {
+  border-bottom: solid 3px white;
+}
+
+header .nav-ul li a .nums {
+  font-weight: bold;
+}
+
+header .nav-ul li a:not(.active)::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 0px;
+  height: .2vw;
+  bottom: -.2vw;
+}
+
+header .nav-ul li a:not(.active):hover::before {
+  width: 100%;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+  header {
+    width: 100%;
+  }
+  header .logo img {
+    height: 48px;
+    width: 48px;
+  }
+  header span {
+    display: none;
+  }
+  header .nav-ul {
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+    width: 40vw !important;
+  }
+  header .nav-ul li a {
+    font-size: 16px !important;
+    letter-spacing: 2.4px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    margin-left: 5vw;
+    margin-top: 0;
+    -webkit-backdrop-filter: unset;
+            backdrop-filter: unset;
+    width: 95vw;
+  }
+  header .logo img {
+    width: 6vw;
+    height: 6vw;
+  }
+  header .line {
+    display: none;
+  }
+  header .nav-ul {
+    margin-left: 90px;
+    width: 60vw !important;
+  }
+  header .nav-ul li a {
+    font-size: 14px;
+    letter-spacing: 2.3px;
+  }
+  header .nav-ul li a::before {
+    display: none;
+  }
+  header .nav-ul li a span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative !important;
+    width: auto;
+    margin-top: 4vh;
+  }
+  header .logo img {
+    height: 40px;
+    width: 40px;
+  }
+  header .burger-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 3;
+    position: absolute;
+    right: 6vw;
+  }
+  header .nav-ul {
+    display: none;
+    margin-top: 50%;
+  }
+  header .nav-ul.show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: unset !important;
+        -ms-flex-pack: unset !important;
+            justify-content: unset !important;
+    -webkit-backdrop-filter: blur(25px);
+            backdrop-filter: blur(25px);
+    padding: 40% 0 20% 20%;
+    position: relative;
+    border: transparent;
+    border-radius: 20px;
+    z-index: 2;
+    width: 70vw !important;
+  }
+  header .nav-ul li {
+    margin: 16px 0px;
+  }
+  header .nav-ul a {
+    font-size: 16px !important;
+    letter-spacing: 2.7px !important;
+    padding: 1px !important;
+  }
+  header .nav-ul a span {
+    display: inline !important;
+  }
+  header .nav-ul a.active {
+    border-bottom: none !important;
+  }
+}
+/*# sourceMappingURL=header.css.map */

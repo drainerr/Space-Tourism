@@ -1,0 +1,197 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@font-face {
+    font-family: 'Bellefair';
+    src: url(../../assets/fonts/Bellefair-Regular.ttf);
+}
+
+$font-Barlow: 'Barlow Condensed', sans-serif;
+$home-p-color: #D0D6F9;
+$space-explore-font: 'Bellefair';
+
+@mixin defLink($color) {
+    color: $color;
+    text-decoration: none;
+}
+@mixin bgProps(){
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-attachment: fixed;
+}
+.technology{
+    color:white;
+    background-image: url('../../assets/technology/background-technology-desktop.jpg');
+    background-position: center;
+    @include bgProps();
+    position:absolute;
+    height:auto;
+    min-height: 100%;
+    width:100%;
+    overflow-x:hidden;
+    .technology-wrapper{
+        display:flex;
+        flex-direction: column;
+        margin-top:8vh;
+        margin-left:12vw;
+        h2{
+            font-family: $font-Barlow;
+            font-size:2vw;
+            letter-spacing: .3vw;
+            font-weight: 500;
+            .tech-num{
+                margin-right:1.7vw;
+                color:rgba(255,255,255,.5)
+            }
+        }
+        .technology-main{
+            display:flex;
+            align-items:center;
+            margin-top:5vh;
+            .buttons{
+                display:flex;
+                flex-direction: column;
+                .button-num{
+                    margin-top:4vh;
+                    width:6vw;
+                    height:6vw;
+                    display:flex;
+                    justify-content: center;
+                    align-items:center;
+                    background-color:transparent;
+                    border:solid 1px rgba(255,255,255,.5);
+                    border-radius:50%;
+                    font-weight: 500;
+                    font-size:2.3vw;
+                    font-family: 'Bellefair';
+                    letter-spacing:.15vw;
+                    &:hover{
+                        background-color:rgba(255,255,255,.5);
+                        transition: .3s linear;
+                        cursor: pointer;
+                    }
+                    &:nth-child(1){
+                        margin-top:0;
+                    }
+                }
+            } 
+            .about-tech{
+                margin-left:6vw;
+                max-width:34vw;
+                margin-right:9vw;
+                .tech-h4{
+                    font-size: 1.1vw;
+                    letter-spacing: .12vw;
+                    color:$home-p-color;
+                    font-weight: 500;
+                    font-family: $font-Barlow;
+                    margin-bottom:1vh;
+                }   
+                .tech-h1{
+                    font-size:4vw;
+                    font-family: 'Bellefair';
+                    font-weight: 500;
+                    margin-bottom:1.15vh;
+                }
+                .tech-p{
+                    color:$home-p-color;
+                    line-height: 4vh;
+                    font-family: $font-Barlow;
+                    font-size:1.2vw;
+                }
+            }
+            .img-container{
+                img{
+                    width:36vw;
+                    height:60vh;
+                    border-top-left-radius: 30px ;
+                    border-bottom-left-radius: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .technology{
+        background-image:url('../../assets/technology/background-technology-tablet.jpg') !important;
+        .technology-wrapper{
+            margin-left:0 !important;
+            h2{
+                margin-left:5vw;
+                font-size: 20px !important;
+            }
+            .technology-main{
+                flex-direction: column-reverse;
+                .buttons{
+                    order: 1;
+                    flex-direction: row !important;
+                    .button-num{
+                        margin-top:0 !important;
+                        margin-right: 2vw;
+                        width:6vw !important;
+                        height:6vw !important;
+                        font-size:3vw !important;
+                        &:nth-last-child(1){
+                            margin-right:0;
+                        }
+                    }
+                }
+                .about-tech{
+                    max-width:60vw !important;
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center !important;
+                    .tech-h4{
+                        font-size:16px !important;
+                        letter-spacing: 2.7px !important;
+                        margin:4vh 0 2vh 0 !important; 
+                    }
+                    .tech-h1{
+                        font-size:5vw !important;
+                    }
+                    .tech-p{
+                        font-size:16px !important;
+                        line-height:3.5vh !important;
+                        text-align: center;
+                        margin-bottom:9vh;
+                    }
+                }
+                .img-container{
+                    order:1;
+                    margin-top:6vh;
+                    margin-bottom:5vh;
+                    img{
+                        width:768px !important;
+                        height:310px !important;
+                        border-radius: 0 !important;   
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:460px){
+    .technology{
+        background-image: url('../../assets/technology/background-technology-mobile.jpg') !important;
+        h2{
+            margin-left:0 !important;
+            text-align: center;
+            font-size:16px !important;
+            letter-spacing: 2.7px !important;
+        }
+        .technology-wrapper{
+            .img-container{
+                margin:5vh 0 5vh 0 !important;
+            }
+            .buttons{
+                .button-num{
+                    height:11vw !important;
+                    width:11vw !important;
+                    font-size:16px !important;
+                }
+            }
+        }
+    }
+}

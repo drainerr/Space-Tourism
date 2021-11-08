@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@font-face {
+    font-family: 'Bellefair';
+    src: url(../../assets/fonts/Bellefair-Regular.ttf);
+}
+
+$font-Barlow: 'Barlow Condensed', sans-serif;
+$home-p-color: #D0D6F9;
+$space-explore-font: 'Bellefair';
+
+@mixin defLink($color) {
+    color: $color;
+    text-decoration: none;
+}
+@mixin bgProps(){
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.destination{
+    color:white;
+    background-image: url('../../assets/destination/background-destination-desktop.jpg');
+    background-position: center;
+    @include bgProps();
+    position:absolute;
+    height:auto;
+    min-height: 100%;
+    width:100%;
+    overflow:hidden;
+    .destination-main{
+        display:flex;
+        flex-direction: column;
+        transition: all 0.5s 0s linear;
+        h2{
+            font-family: $font-Barlow;
+            font-size:2vw;
+            letter-spacing:.3vw;
+            margin-left:12vw;
+            margin-top: 4vh;
+            span{
+                color:rgba(255,255,255,.25);
+                font-weight: bold;
+                margin-right:2vw;
+            }
+        }
+        .planet{
+            display:flex;
+            margin-top:7vh;
+            align-items: center;
+            .planet-image-div{
+                margin-left:16vw;
+                img{
+                    height:27vw;
+                    width:27vw;
+                }
+            }
+            .about-planet{
+                margin-left:11vw;
+                max-width:31vw;
+                height:50vh;
+                margin-bottom:14vh;
+                .planet-links{
+                    display:flex;
+                    list-style: none;
+                    justify-content: flex-start;
+                    li{
+                        font-family: $font-Barlow;
+                        font-size:1.2vw;
+                        letter-spacing: .15vw;
+                        position:relative;
+                        margin-right:2vw;
+                        color:$home-p-color;
+                        border-bottom:.4vh solid transparent;
+                        padding-bottom:8px;
+                        &.active{
+                            border-bottom-color: white;
+                        }
+                        &:hover{
+                            cursor:pointer;
+                        }
+                        &:not(.active)::before{
+                            content:"";
+                            position: absolute;
+                            background-color:rgba(255,255,255,.5);
+                            width:0px;
+                            height:.2vw;
+                            bottom:-.5vh;
+                        }
+                        &:not(.active):hover::before{
+                            width:100%;
+                            transition: .5s;
+                        }
+                    }
+                }
+                h1{
+                    font-family: 'Bellefair';
+                    font-size:7vw;
+                    margin:4vh auto 2vh auto;
+                    font-weight: 500;
+                }
+                p{
+                    color:$home-p-color;
+                    font-size:1.1vw;
+                    line-height: 4vh;
+                }
+                .distance-time{
+                    display:flex;
+                    margin-top:3vh;
+                    text-transform: uppercase;
+                    padding-bottom:4vh;
+                    border-top:1px solid rgba(255,255,255,.25);
+                    padding-top:3vh;
+                    .distance{
+                        margin-right:6vw;
+                    }
+                    h4{
+                        font-size:.9vw;
+                        letter-spacing: .15vw;
+                        font-family: $font-Barlow;
+                        color:$home-p-color;
+                    }
+                    h3{
+                        font-size:2vw;
+                        font-family: 'Bellefair';
+                        margin-top:1vh;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+// Tablet Design
+@media only screen and (max-width:768px){
+    .destination{
+        background-image: url('../../assets/destination/background-destination-tablet.jpg');
+        .destination-main{
+            h2{
+                font-size: 20px;
+                letter-spacing: 3.38px;
+                margin-left:38.5px;
+                margin-top:40px;
+            }
+            .planet{
+                flex-direction: column;
+                .planet-image-div{
+                    margin:60px 0 53px 0;
+                    img{
+                        height:300px;
+                        width:300px;
+                    }
+                }
+                .about-planet{
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height:auto !important;
+                    margin-bottom:0 !important;
+                    margin-left:0;
+                    max-width:570px;
+                    .planet-links{
+                        justify-content: space-between;
+                        margin-bottom:32px;
+                        width:285px;
+                        li{
+                            font-size: 16px;
+                            letter-spacing: 2.7px;
+                        }
+                    }
+                    h1{
+                        font-size:80px;
+                        margin-bottom:8px;
+                    }
+                    p{
+                        font-size:16px;
+                        line-height: 28px;
+                        text-align: center;
+                    }
+                    .distance-time{
+                        max-width:570px;
+                        justify-content: center;
+                        h3{
+                            font-size:28px;
+                        }
+                        h4{
+                            font-size:14px;
+                            letter-spacing: 2.36px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile Design
+@media only screen and (max-width:480px) {
+    .destination-main{
+        h2{
+            letter-spacing: 2.7px;
+            font-size: 16px !important;
+            margin-left:0;
+            text-align: center;
+        }
+        .planet{
+            margin:32px 0 26px 0;
+            .planet-image-div{
+                margin-top: 32px !important;
+                img{
+                    height:170px !important;
+                    width:170px !important;
+                }
+            }
+            .about-planet{
+                max-width: 327px !important;
+                .planet-links{
+                    margin-bottom: 20px !important;
+                    max-width: 237px;
+                    li{
+                        font-size: 14px !important;
+                        letter-spacing: 2.36px !important;
+                    }
+                }
+                h1{
+                    font-size:56px !important;
+                }
+                p{
+                    font-size:15px !important;
+                    line-height: 25px !important;
+                    font-weight: 500 !important;
+                }
+                .distance-time{
+                    flex-direction: column !important;
+                    margin-right:0;
+                    text-align: center;
+                    h4{
+                        margin-bottom:12px;
+                    }
+                    .distance,.time{
+                        margin-top: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
