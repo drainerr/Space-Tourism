@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route,Switch} from 'react-router-dom';
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename="/space-tourism">
       <div className="App">
         <Switch>
           <Route exact path="/">
