@@ -2,21 +2,38 @@ import Header from "../header";
 import './crew.css'
 import defaultImg from "../../assets/crew/image-douglas-hurley.webp"
 import Data from '../../assets/data.json' 
+import fCrewMember from '../../assets/crew/image-douglas-hurley.webp'
+import sCrewMember from '../../assets/crew/image-mark-shuttleworth.webp'
+import tCrewMember from '../../assets/crew/image-victor-glover.webp'
+import frCrewMember from '../../assets/crew/image-anousheh-ansari.webp'
 
 const Crew = () => {
     
     const active = (id) => {
         const crew = document.querySelectorAll('.dot')
+        const img = document.querySelector('.crew-img')
 
-        const {role,name,bio,images} = Data.crew[id];
+        const {role,name,bio} = Data.crew[id]
 
         crew.forEach(e => e.style.backgroundColor = 'rgba(255,255,255,.17)')
-        crew[id].style.backgroundColor = 'white';
+        crew[id].style.backgroundColor = 'white'
 
-        document.querySelector('.crew-h2').innerText = role;
-        document.querySelector('.crew-h1').innerText = name;
-        document.querySelector('.crew-p').innerText = bio;  
-        document.querySelector('.crew-img').src = images.webp;
+        document.querySelector('.crew-h2').innerText = role
+        document.querySelector('.crew-h1').innerText = name
+        document.querySelector('.crew-p').innerText = bio
+
+        if(id === 0){
+            img.src = fCrewMember
+        }
+        if(id === 1){
+            img.src = sCrewMember
+        }
+        if(id === 2){
+            img.src = tCrewMember
+        }
+        if(id === 3){
+            img.src = frCrewMember
+        }
     }
 
     return (

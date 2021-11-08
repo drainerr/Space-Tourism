@@ -25,6 +25,7 @@ const Technology = () => {
         document.querySelector('.tech-p').innerText = description
         const img = document.querySelector('.tech-img')
         const width = window.innerWidth
+        
         if(width > 768){
             if(id === 0){
                 img.src = fImagePortrait;

@@ -1,18 +1,35 @@
 import Header from '../header'
-import MOON from '../../assets/destination/image-moon.webp'
+import Moon from '../../assets/destination/image-moon.webp'
+import Mars from '../../assets/destination/image-mars.webp'
+import Titan from '../../assets/destination/image-titan.webp'
+import Europa from '../../assets/destination/image-europa.webp'
 import './destination.css'
 import Data from '../../assets/data.json' 
 
 const Destination = () => {
     const active = (e) => {
-        let ul  = Object.values(document.querySelectorAll('.planet-links li'))    
+        let ul  = Object.values(document.querySelectorAll('.planet-links li')) 
+        const img = document.querySelector('.planet-img');   
         if(ul !== null && ul !== undefined){
             ul.forEach(el=>{
                 el.style.borderBottomColor = 'transparent'
             })
             ul[e].style.borderBottomColor = "white"      
-                    
-            document.querySelector('.planet-img').src = Data.destinations[e].images.webp
+            
+            // Choose a relevant image
+            if(e === 0){
+                img.src = Moon
+            }
+            if(e === 1){
+                img.src = Mars
+            }
+            if(e === 2){
+                img.src = Europa
+            }
+            if(e === 3){
+                img.src = Titan
+            }
+
             document.querySelector('.planet-name').innerText = Data.destinations[e].name
             document.querySelector('.planet-description').innerText = Data.destinations[e].description
             document.querySelector('#distance').innerText = Data.destinations[e].distance
@@ -27,7 +44,7 @@ const Destination = () => {
                     <h2><span className="destination-num">01</span>PICK YOUR DESTINATION</h2>
                     <div className="planet">
                         <div className="planet-image-div">
-                            <img className = "planet-img" src={MOON} alt="Planet"></img>
+                            <img className = "planet-img" src={Moon} alt="Planet"></img>
                         </div>
                         <div className="about-planet">
                             <ul className='planet-links'>
