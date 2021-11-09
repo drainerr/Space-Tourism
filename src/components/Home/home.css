@@ -161,9 +161,6 @@ body .home-container main .explore:hover::before {
 }
 
 @media only screen and (max-width: 480px) {
-  html {
-    height: 100% !important;
-  }
   body {
     background-image: url("../../assets/home/background-home-mobile.jpg") !important;
     -webkit-transition: background-image 0.5s ease-in-out;
