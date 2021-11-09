@@ -159,8 +159,8 @@
   .technology .technology-wrapper .technology-main .buttons .button-num {
     margin-top: 0 !important;
     margin-right: 2vw;
-    width: 6vw !important;
-    height: 6vw !important;
+    width: 7.8vw !important;
+    height: 7.8vw !important;
     font-size: 3vw !important;
   }
   .technology .technology-wrapper .technology-main .buttons .button-num:nth-last-child(1) {
@@ -189,7 +189,7 @@
   }
   .technology .technology-wrapper .technology-main .about-tech .tech-p {
     font-size: 16px !important;
-    line-height: 3.5vh !important;
+    line-height: 28px !important;
     text-align: center;
     margin-bottom: 9vh;
   }
@@ -211,19 +211,40 @@
   .technology {
     background-image: url("../../assets/technology/background-technology-mobile.jpg") !important;
   }
-  .technology h2 {
+  .technology .technology-wrapper h2 {
     margin-left: 0 !important;
     text-align: center;
     font-size: 16px !important;
     letter-spacing: 2.7px !important;
   }
-  .technology .technology-wrapper .img-container {
-    margin: 5vh 0 5vh 0 !important;
+  .technology .technology-wrapper .technology-main .buttons {
+    margin-top: 34px !important;
   }
-  .technology .technology-wrapper .buttons .button-num {
+  .technology .technology-wrapper .technology-main .buttons .button-num {
     height: 11vw !important;
     width: 11vw !important;
-    font-size: 16px !important;
+    font-size: 10px !important;
+  }
+  .technology .technology-wrapper .technology-main .about-tech {
+    max-width: 85vw !important;
+  }
+  .technology .technology-wrapper .technology-main .about-tech .tech-h1 {
+    font-size: 24px !important;
+  }
+  .technology .technology-wrapper .technology-main .about-tech .tech-h4 {
+    font-size: 14 px !important;
+    letter-spacing: 2.36px !important;
+  }
+  .technology .technology-wrapper .technology-main .about-tech .tech-p {
+    font-size: 15px !important;
+    line-height: 25px !important;
+  }
+  .technology .technology-wrapper .technology-main .img-container {
+    margin: 5vh 0 5vh 0 !important;
+  }
+  .technology .technology-wrapper .technology-main .img-container img {
+    height: 170px !important;
+    width: 375px !important;
   }
 }
 /*# sourceMappingURL=technology.css.map */
